@@ -4,7 +4,7 @@
     -->
     <config>
         <!-- Application title -->
-        <title>The Srophe web application</title>
+        <title>The Syriac Bibliography</title>
         <!-- App description -->
         <description>A collaborative research project publishling online reference works concerning the
             culture, history, and literature of Syriac communities from antiquity to the present.</description>
@@ -15,11 +15,11 @@
         <!-- Web Site URL -->
         <url>http://syriaca.org/</url>
         <!-- Root of app for building dynamic links. Default is eXist app root  /exist/apps/srophe -->
-        <nav-base>/exist/apps/srophe</nav-base>
+        <nav-base>/exist/apps/syriacbibliography</nav-base>
         <!-- eXist app root for app deployment-->
-        <app-root>srophe</app-root>
+        <app-root>syriacbibliography</app-root>
         <!-- eXist data app root for TEI application.  -->
-        <data-root>srophe-data</data-root>
+        <data-root>syriacbibliography-data</data-root>
         <!-- Base URI for identifiers in app data -->
         <base_uri>http://syriaca.org</base_uri>
         <!-- 
@@ -70,6 +70,7 @@
             <collection name="works" title="NHSL" app-root="/" data-root="works" record-URI-pattern="http://syriaca.org/work/"/>
             <collection name="bibl" title="Works Cited" app-root="/bibl/" data-root="bibl" record-URI-pattern="http://syriaca.org/bibl/"/>
             -->
+            <collection name="bibl" title="Works Cited" app-root="/" data-root="bibl" record-URI-pattern="http://syriaca.org/bibl/"/>
         </collections>
     </config>
 </meta>
