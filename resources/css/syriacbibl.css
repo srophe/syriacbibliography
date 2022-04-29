@@ -1,0 +1,24 @@
+/* Application styles */
+/*
+ * Colors:
+ *  Dark yellow/gold: #CC9933 
+ *  Dark purple: #66599B
+ *  Grey: #666666
+ */
+
+body {
+  color: #656566; 
+}
+.banner-text{color: #CC9933;}
+.navbar {border-bottom:4px solid #CC9933 !important;}
+.navbar-inner {border-bottom:.5em solid #CC9933 !important;}
+.navbar-inner {border-bottom:.5em solid #CC9933 !important;}
+.btn-default, .search-box .search-btn{color:  #CC9933;}
+.image-banner {border-bottom:4px solid #CC9933;}
+footer {border-top:4px solid #CC9933; text-align:center;}
+h1, h2 {color: #CC9933;}
+.whitetxt {color:white;}
+.home-page {
+    text-align:left;
+    background-image:url('../images/banner.jpeg');
+    }
