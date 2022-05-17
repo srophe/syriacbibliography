@@ -357,9 +357,13 @@ declare function tei2html:summary-view-bibl($nodes as node()*, $id as xs:string?
                   else $nodes/descendant-or-self::tei:title[1]
     let $series := for $a in distinct-values($nodes/descendant::tei:seriesStmt/tei:biblScope/tei:title)
                    return tei2html:translate-series($a)
+    let $url := 
+                if($config:get-config//*:document-ids[@type='document-url']) then
+                    concat('record.html?doc=',document-uri(root($nodes[1])))
+                else replace(replace($id,$config:base-uri,$config:nav-base),'/tei','')                     
     return 
         <div class="short-rec-view">
-            <a href="{replace(replace($id,$config:base-uri,$config:nav-base),'/tei','')}" dir="ltr">{tei2html:tei2html($title)}</a>
+            <a href="{$url}" dir="ltr">{tei2html:tei2html($title)}</a>
             <button type="button" class="btn btn-sm btn-default copy-sm clipboard"  
                 data-toggle="tooltip" title="Copies record title &amp; URI to clipboard." 
                 data-clipboard-action="copy" data-clipboard-text="{normalize-space($title[1])} - {normalize-space($id[1])}">
@@ -371,7 +375,8 @@ declare function tei2html:summary-view-bibl($nodes as node()*, $id as xs:string?
             }</span>
             {
             if($id != '') then 
-            <span class="results-list-desc uri"><span class="srp-label">URI: </span><a href="{replace(replace($id,$config:base-uri,$config:nav-base),'/tei','')}">{replace($id,'/tei','')}</a></span>
+            <span class="results-list-desc uri"><span class="srp-label">URI: </span>
+            <a href="{$url}" dir="ltr">{$url}</a></span>
             else()
             }
         </div>
