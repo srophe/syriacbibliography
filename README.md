@@ -1,3 +1,5 @@
+2026-07-16: Archiving this repository as no longer needed. Data for the Comprehensive Bibliography is published via the [srophe/Gaddel](https://github.com/srophe/Gaddel/) repository, with data stored on the [srophe/syriaca-data](https://github.com/srophe/Gaddel/) repository in `data/bibl/`.
+
 # Srophé Application
 A TEI publishing application.
 
